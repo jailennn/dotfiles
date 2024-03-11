@@ -27,3 +27,11 @@ if [ $? -eq 0 ]; then
 	        echo "Error: Failed to install packages."
 		    exit 1
 fi
+
+# Switch to non root user for remainder of commands
+sudo -u your_non_root_user /bin/bash <<EOF
+# Now we are running commands as the non-root user
+
+echo "Running commands as the non-root user"
+
+EOF
