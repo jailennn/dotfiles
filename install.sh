@@ -13,5 +13,16 @@ if command -v apt >/dev/null 2>&1; then
 	    echo "APT package manager is installed."
     else
 	        echo "APT package manager is not installed."
+		exit 1
 fi
 
+apt update
+apt install -y cmatrix nmap bind-tools
+# Check if installation was successful
+
+if [ $? -eq 0 ]; then
+	    echo "Packages cmatrix, nmap, and bind-tools installed successfully."
+    else
+	        echo "Error: Failed to install packages."
+		    exit 1
+fi
