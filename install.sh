@@ -17,7 +17,7 @@ if command -v apt >/dev/null 2>&1; then
 fi
 
 apt update
-apt install -y cmatrix nmap bind-tools
+apt install -y cmatrix nmap dnsutils
 # Check if installation was successful
 
 if [ $? -eq 0 ]; then
