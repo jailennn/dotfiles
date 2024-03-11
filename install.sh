@@ -29,9 +29,9 @@ if [ $? -eq 0 ]; then
 fi
 
 # Switch to non root user for remainder of commands
-sudo -u your_non_root_user /bin/bash <<EOF
+sudo -u jailen_ubuntu /bin/bash <<EOF
 # Now we are running commands as the non-root user
 
-echo "Running commands as the non-root user"
+echo "Running commands as the non-root user (jailen_ubuntu)"
 
 EOF
