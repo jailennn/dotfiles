@@ -16,10 +16,11 @@ if command -v apt >/dev/null 2>&1; then
 		exit 1
 fi
 
+# Install packages
 apt update
-apt install -y cmatrix nmap dnsutils
-# Check if installation was successful
+apt install -y dnsutils nmap anaconda cmatrix
 
+# Check if installation was successful
 if [ $? -eq 0 ]; then
 	    echo "Packages cmatrix, nmap, and bind-tools installed successfully."
     else
