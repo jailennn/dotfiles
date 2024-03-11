@@ -18,7 +18,7 @@ fi
 
 # Install packages
 apt update
-apt install -y dnsutils nmap anaconda cmatrix
+apt install -y dnsutils nmap cmatrix
 
 # Check if installation was successful
 if [ $? -eq 0 ]; then
