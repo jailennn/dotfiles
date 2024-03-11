@@ -1,0 +1,10 @@
+[user]
+	name = Jailen.D
+	email = duncan.170@wright.edu
+[core]
+	editor = vim
+[help]
+	autocorrect = 2
+[include]
+	path = ~/dotfiles/.gitmessage.txt
+	    
