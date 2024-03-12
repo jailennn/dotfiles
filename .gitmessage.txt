@@ -1,1 +1,13 @@
-Please type commit message below: 
+# Custom Git Commit Message Template
+#
+# Please enter the details of your commit below. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Description:
+#   [Enter a brief description of the changes made in this commit]
+#
+# Notes:
+#   [Add any additional notes or details about the changes]
+#
+# Issues:
+#   [Reference any related issue or task ID] 
