@@ -33,9 +33,7 @@ sudo -u jailen_ubuntu /bin/bash <<EOF
 # Now we are running commands as the non-root user
 echo "Running commands as the non-root user (jailen_ubuntu)"
 
-# Git config
-
-# Link to the .gitconfig file
+# Link to the .gitconfig and .bashrc file
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 
