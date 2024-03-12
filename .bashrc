@@ -1,16 +1,6 @@
 # Aliases
-function gs() {
-	git status
-}
-function ga() {
-	git add "$@"
-}
-function gc() {
-	git commit
-}
-function gp() {
-	git push
-}
-function home() {
-	cd ~
-}
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gs='git status'
+alias home='cd ~'
