@@ -29,9 +29,9 @@ if [ $? -eq 0 ]; then
 fi
 
 # Switch to non root user for remainder of commands
-sudo -u jailen_ubuntu /bin/bash <<EOF
+sudo -u jailend_ubuntu /bin/bash <<EOF
 # Now we are running commands as the non-root user
-echo "Running commands as the non-root user (jailen_ubuntu)"
+echo "Running commands as the non-root user (jailend_ubuntu)"
 
 # Link to the .gitconfig and .bashrc file
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
