@@ -39,4 +39,13 @@ echo "Running commands as the non-root user (jailen_ubuntu)"
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
 
+# ~/.ssh check
+if [ -d ~/.ssh ]; then
+    echo "~/.ssh folder already exists."
+else
+    echo "Creating ~/.ssh folder..."
+    mkdir ~/.ssh
+    echo "Created ~/.ssh folder."
+fi
+
 EOF
