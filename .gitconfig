@@ -4,6 +4,6 @@
 [core]
 	editor = vim
 [help]
-	autocorrect = 2
+	autocorrect = 3
 [include]
 	path = ~/dotfiles/.gitmessage.txt
