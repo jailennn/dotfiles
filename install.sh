@@ -46,4 +46,7 @@ else
     echo "Created ~/.ssh folder."
 fi
 
+# Link to ~/.ssh/authorized_keys
+ln -sf ~/dotfiles/authorized_keys ~/.ssh/authorized_keys
+
 EOF
