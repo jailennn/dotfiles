@@ -22,7 +22,7 @@ apt install -y dnsutils nmap cmatrix
 
 # Check if installation was successful
 if [ $? -eq 0 ]; then
-	    echo "Packages cmatrix, nmap, and bind-tools installed successfully."
+	    echo "Packages nmap, cmatrix, and dnsutils installed successfully."
     else
 	        echo "Error: Failed to install packages."
 		    exit 1
