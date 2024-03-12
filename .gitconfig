@@ -7,8 +7,3 @@
 	autocorrect = 2
 [include]
 	path = ~/dotfiles/.gitmessage.txt
-[alias]
-	ga = git add
-	gc = git commit
-	gp = git push
-	home = cd ~
