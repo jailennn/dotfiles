@@ -37,6 +37,6 @@ echo "Running commands as the non-root user (jailen_ubuntu)"
 
 # Link to the .gitconfig file
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
-
+ln -sf ~/dotfiles/.bashrc ~/.bashrc
 
 EOF
