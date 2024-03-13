@@ -29,11 +29,11 @@ if [ $? -eq 0 ]; then
 fi
 
 # Check for anaconda3
-anaconda_dir="$HOME/anaconda3"
-if test -d "$anaconda_dir"; then
-	    echo "Anaconda 3 is already installed in the default location: $anaconda_dir"
-    else
-	        echo "Anaconda 3 needs to be installed."
+output=$(~/anaconda3/bin/anaconda --version)
+if [ -n "$output" ]; then
+	echo "Command produced output: $output";
+else
+	echo "Command produced no output or encountered an error";
 fi
 
 # Switch to non root user for remainder of commands
