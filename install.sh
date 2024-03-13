@@ -34,6 +34,15 @@ sudo -u jailend_ubuntu /bin/bash -c '
 echo "Running commands as the non-root user (jailend_ubuntu)"
 echo "I am now user $(whoami)"
 
+# Check for anaconda3
+anaconda_dir="$HOME/anaconda3"
+
+if [ -d "$anaconda_dir" ]; then
+	    echo "Anaconda 3 is already installed in the default location: $anaconda_dir"
+    else
+	    echo "Anaconda 3 needs to be installed."
+fi
+
 # Link to the .gitconfig and .bashrc file
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/.bashrc ~/.bashrc
@@ -49,13 +58,4 @@ fi
 
 # Link to ~/.ssh/authorized_keys
 ln -sf ~/dotfiles/.ssh/authorized_keys ~/.ssh/authorized_keys
-
-# Check for anaconda3
-anaconda_dir="$HOME/anaconda3"
-
-if [ -d "$anaconda_dir" ]; then
-	    echo "Anaconda 3 is already installed in the default location: $anaconda_dir"
-    else
-	    echo "Anaconda 3 needs to be installed."
-fi
 '
