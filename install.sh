@@ -19,6 +19,7 @@ fi
 # Install packages
 apt update
 apt install -y dnsutils nmap cmatrix
+apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
 
 # Check if installation was successful
 if [ $? -eq 0 ]; then
