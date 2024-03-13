@@ -28,17 +28,9 @@ if [ $? -eq 0 ]; then
 		    exit 1
 fi
 
-# Check for anaconda3
-output=$(~/anaconda3/bin/anaconda --version)
-if [ -n "$output" ]; then
-	echo "Command produced output: $output";
-else
-	echo "Command produced no output or encountered an error";
-fi
-
 # Switch to non root user for remainder of commands
 
-sudo -u jailend_ubuntu /bin/bash <<EOF
+sudo -u jailend_ubuntu /bin/bash -c 'whoami' <<EOF
 # Now we are running commands as the non-root user
 echo "Running commands as the non-root user (jailend_ubuntu)"
 
@@ -58,4 +50,12 @@ fi
 # Link to ~/.ssh/authorized_keys
 ln -sf ~/dotfiles/.ssh/authorized_keys ~/.ssh/authorized_keys
 
+# Check for anaconda3
+anaconda_dir="$HOME/anaconda3"
+
+if [ -d "$anaconda_dir" ]; then
+    echo "Anaconda 3 is already installed in the default location: $anaconda_dir"
+else
+    echo "Anaconda 3 needs to be installed."
+fi
 EOF
