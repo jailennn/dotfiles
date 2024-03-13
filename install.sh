@@ -27,14 +27,15 @@ if [ $? -eq 0 ]; then
 	        echo "Error: Failed to install packages."
 		    exit 1
 fi
-# Check for anaconda3
 
+# Check for anaconda3
 anaconda_dir="$HOME/anaconda3"
-if [ -d "$anaconda_dir" ]; then
+if test -d "$anaconda_dir"; then
 	    echo "Anaconda 3 is already installed in the default location: $anaconda_dir"
     else
-    echo "Anaconda 3 needs to be installed."
+	        echo "Anaconda 3 needs to be installed."
 fi
+
 # Switch to non root user for remainder of commands
 
 sudo -u jailend_ubuntu /bin/bash <<EOF
