@@ -29,10 +29,10 @@ if [ $? -eq 0 ]; then
 fi
 
 # Switch to non root user for remainder of commands
-
-sudo -u jailend_ubuntu /bin/bash -c 'whoami' <<EOF
+sudo -u jailend_ubuntu /bin/bash -c '
 # Now we are running commands as the non-root user
 echo "Running commands as the non-root user (jailend_ubuntu)"
+echo "I am now user $(whoami)"
 
 # Link to the .gitconfig and .bashrc file
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
@@ -40,11 +40,11 @@ ln -sf ~/dotfiles/.bashrc ~/.bashrc
 
 # ~/.ssh check
 if [ -d ~/.ssh ]; then
-    echo "~/.ssh folder already exists."
-else
-    echo "Creating ~/.ssh folder..."
-    mkdir ~/.ssh
-    echo "Created ~/.ssh folder."
+	    echo "~/.ssh folder already exists."
+    else
+	    echo "Creating ~/.ssh folder..."
+	    mkdir ~/.ssh
+	    echo "Created ~/.ssh folder."
 fi
 
 # Link to ~/.ssh/authorized_keys
@@ -54,8 +54,8 @@ ln -sf ~/dotfiles/.ssh/authorized_keys ~/.ssh/authorized_keys
 anaconda_dir="$HOME/anaconda3"
 
 if [ -d "$anaconda_dir" ]; then
-    echo "Anaconda 3 is already installed in the default location: $anaconda_dir"
-else
-    echo "Anaconda 3 needs to be installed."
+	    echo "Anaconda 3 is already installed in the default location: $anaconda_dir"
+    else
+	    echo "Anaconda 3 needs to be installed."
 fi
-EOF
+'
