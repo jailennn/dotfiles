@@ -56,6 +56,7 @@ if [ -d ~/.ssh ]; then
 	    echo "Created ~/.ssh folder."
 fi
 
-# Link to ~/.ssh/authorized_keys
+# Link to ~/.ssh/authorized_keys and ~/.ssh/config
 ln -sf ~/dotfiles/.ssh/authorized_keys ~/.ssh/authorized_keys
+ln -sf ~/dotfiles/.ssh/config ~/.ssh/config
 '
