@@ -29,9 +29,7 @@ if [ $? -eq 0 ]; then
 fi
 # Check for anaconda3
 
-anaconda_dir="$HOME/anaconda3"
-
-# Check if Anaconda 3 is installed in the default location
+anaconda_dir="~/anaconda3"
 if [ -d "$anaconda_dir" ]; then
 	    echo "Anaconda 3 is already installed in the default location: $anaconda_dir"
     else
