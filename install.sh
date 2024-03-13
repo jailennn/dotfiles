@@ -27,8 +27,18 @@ if [ $? -eq 0 ]; then
 	        echo "Error: Failed to install packages."
 		    exit 1
 fi
+# Check for anaconda3
 
+anaconda_dir="$HOME/anaconda3"
+
+# Check if Anaconda 3 is installed in the default location
+if [ -d "$anaconda_dir" ]; then
+	    echo "Anaconda 3 is already installed in the default location: $anaconda_dir"
+    else
+    echo "Anaconda 3 needs to be installed."
+fi
 # Switch to non root user for remainder of commands
+
 sudo -u jailend_ubuntu /bin/bash <<EOF
 # Now we are running commands as the non-root user
 echo "Running commands as the non-root user (jailend_ubuntu)"
@@ -47,6 +57,6 @@ else
 fi
 
 # Link to ~/.ssh/authorized_keys
-ln -sf ~/dotfiles/authorized_keys ~/.ssh/authorized_keys
+ln -sf ~/dotfiles/.ssh/authorized_keys ~/.ssh/authorized_keys
 
 EOF
