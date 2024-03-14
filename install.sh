@@ -72,7 +72,7 @@ if [ -d "$HOME/.vim/bundle/Vundle.vim" ]; then
 fi
 # Change colorscheme
 
-echo "Changing colorscheme to solarized..."
-echo "colorscheme solarized" >> ~/.vimrc
+echo "Changing colorscheme to desert..."
+echo "colorscheme desert" >> ~/.vimrc
 echo "Colorscheme changed successfully."
 '
