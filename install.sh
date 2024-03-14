@@ -59,4 +59,20 @@ fi
 # Link to ~/.ssh/authorized_keys and ~/.ssh/config
 ln -sf ~/dotfiles/.ssh/authorized_keys ~/.ssh/authorized_keys
 ln -sf ~/dotfiles/.ssh/config ~/.ssh/config
+
+# Vim customization
+
+# Check if Vundle is installed
+if [ -d "$HOME/.vim/bundle/Vundle.vim" ]; then
+	    echo "Vundle is already installed."
+    else
+	    echo "Installing Vundle..."
+	    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	    echo "Vundle installed successfully in default location."
+fi
+# Change colorscheme
+
+echo "Changing colorscheme to solarized..."
+echo "colorscheme solarized" >> ~/.vimrc
+echo "Colorscheme changed successfully."
 '
