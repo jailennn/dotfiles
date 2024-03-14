@@ -70,9 +70,13 @@ if [ -d "$HOME/.vim/bundle/Vundle.vim" ]; then
 	    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	    echo "Vundle installed successfully in default location."
 fi
-# Change colorscheme
-
-echo "Changing colorscheme to desert..."
-echo "colorscheme desert" >> ~/.vimrc
-echo "Colorscheme changed successfully."
+# Color Scheme check
+if ! grep -q "colorscheme desert" ~/.vimrc; then
+	echo "Changing colorscheme to desert..."
+	echo "colorscheme desert" >> ~/.vimrc
+	echo "Colorscheme changed successfully."
+else
+	echo "Colorscheme is already set to desert."
+fi
+# Add plugin configuration
 '
