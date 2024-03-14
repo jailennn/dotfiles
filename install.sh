@@ -75,8 +75,4 @@ fi
 echo "Changing colorscheme to desert..."
 echo "colorscheme desert" >> ~/.vimrc
 echo "Colorscheme changed successfully."
-
-# Add plugin configuration for Vundle using sed
-sed -i '/call vundle#end()/i Plugin '\''flazz/vim-colorschemes'\''' ~/.vimrc
-echo "Plugin 'flazz/vim-colorschemes' added successfully to ~/.vimrc."
 '
