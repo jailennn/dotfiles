@@ -79,4 +79,13 @@ else
 	echo "Colorscheme is already set to desert."
 fi
 # Add plugin configuration
+if grep -q "flazz/vim-colorschemes" ~/.vimrc; then
+	echo "Plugin 'flazz/vim-colorschemes' already exists in ~/.vimrc."
+else
+	echo "" New Vundle Plugin section"
+	echo "call vundle#begin()" >> ~/.vimrc
+	echo "Plugin 'flazz/vim-colorschemes'" >> ~/.vimrc
+	echo "call vundle#end()" >> ~/.vimrc
+	echo "Plugin 'flazz/vim-colorschemes' added to ~/.vimrc."
+fi
 '
