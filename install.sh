@@ -78,6 +78,16 @@ if ! grep -q "colorscheme desert" ~/.vimrc; then
 else
 	echo "Colorscheme is already set to desert."
 fi
-# Add plugin configuration
-
+# Add plugins to end of .vimrc configuration
+if grep -q "flazz/vim-colorschemes" ~/.vimrc; then
+	    echo "Plugin 'flazz/vim-colorschemes' already exists in ~/.vimrc."
+    else
+	     echo "\" New Vundle section" >> ~/.vimrc
+	     echo "call vundle#begin()" >> ~/.vimrc
+	     echo "Plugin '"'flazz/vim-colorschemes'"'" >> ~/.vimrc
+	     echo "\" Again, All plugins must go before the line below" >> ~/.vimrc
+# Add any more plugins before vundle#end() tag below !!!
+	     echo "call vundle#end()" >> ~/.vimrc
+	     echo "Plugin 'flazz/vim-colorschemes' added to ~/.vimrc."
+fi
 '
