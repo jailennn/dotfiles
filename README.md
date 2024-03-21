@@ -1,4 +1,4 @@
-# Jailen Ducan Dotfles
+# Jailen Duncan Dotfles
 
 ## Overview
 This dotfiles collection has files used for the following:
